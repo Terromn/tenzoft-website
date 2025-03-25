@@ -1,0 +1,69 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Import local fonts */
+@import './fonts.css';
+
+/* Base styles */
+@import './base.css';
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define tag-specific font styles */
+@layer base {
+  h1 {
+    @apply font-freefat text-heading-1;
+  }
+  h2 {
+    @apply font-freefat text-heading-2;
+  }
+  h3 {
+    @apply font-freefat text-heading-3;
+  }
+  p {
+    @apply font-nohemi text-body;
+  }
+  .text-small {
+    @apply text-body-small;
+  }
+  .text-large {
+    @apply text-body-large;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition-colors;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+}
+
+/* Font family settings */
+body {
+  font-family: 'Nohemi', 'Poppins', sans-serif;
+}
+
+#app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+/* Remove the responsive padding that was creating whitespace */
+@media (min-width: 1024px) {
+  #app {
+    padding: 0;
+  }
+}
