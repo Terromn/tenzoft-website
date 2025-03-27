@@ -67,3 +67,16 @@ a {
     padding: 0;
   }
 }
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Fix potential issues with wider elements */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
